@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Move_the_Block" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="WzT-0q-y4V">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hQX-Zj-X5c">
+                                <rect key="frame" x="20" y="686" width="200" height="200"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane" translatesAutoresizingMaskIntoConstraints="NO" id="Oit-d8-I0a">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="84" id="4NK-Yl-zfM">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="73" id="dKO-TF-Imb"/>
+                                            <constraint firstAttribute="height" constant="73" id="q04-gg-FKs">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oJg-iJ-hzL">
+                                <rect key="frame" x="80" y="1086" width="864" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu2-fZ-8f2">
+                                        <rect key="frame" x="0.0" y="0.0" width="864" height="200"/>
+                                        <state key="normal" image="button"/>
+                                        <connections>
+                                            <action selector="flyPlane:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mxt-WX-NPw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="lz5-PR-hU5">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                    </constraint>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oJg-iJ-hzL" secondAttribute="bottom" constant="80" id="61P-zu-O61"/>
+                            <constraint firstItem="oJg-iJ-hzL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8qi-GB-JSX"/>
+                            <constraint firstItem="WzT-0q-y4V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="99B-TO-FzZ"/>
+                            <constraint firstItem="oJg-iJ-hzL" firstAttribute="top" secondItem="hQX-Zj-X5c" secondAttribute="bottom" constant="127" id="DNF-FI-pZI">
+                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                            </constraint>
+                            <constraint firstItem="WzT-0q-y4V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="I7n-bU-BIT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oJg-iJ-hzL" secondAttribute="trailing" constant="60" id="Ixn-9o-2b1"/>
+                            <constraint firstItem="oJg-iJ-hzL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="Qhm-70-UjH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WzT-0q-y4V" secondAttribute="bottom" id="XrO-X6-U0r"/>
+                            <constraint firstItem="hQX-Zj-X5c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hJ3-sE-vxA"/>
+                            <constraint firstAttribute="trailing" secondItem="WzT-0q-y4V" secondAttribute="trailing" id="qsh-CJ-nPD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Plane" destination="Oit-d8-I0a" id="qpw-1N-nwD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="76" height="76"/>
+        <image name="button" width="222" height="110"/>
+        <image name="plane" width="22" height="22"/>
+    </resources>
+</document>
